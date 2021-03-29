@@ -1,3 +1,7 @@
+###############################################################################
+#####------------------  Ant Jdk8 git Build Base Image  ------------------#####
+###############################################################################
+#docker push rajendarreddyj/ant-jdk8-git:latest
 FROM alpine:3.5
 
 #Create Ant Dir in Docker container
