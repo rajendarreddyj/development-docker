@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:rolling
 MAINTAINER rajendarreddy jagapathi "rajendarreddyj@gmail.com"
 
 RUN sed 's/main$/main universe/' -i /etc/apt/sources.list && \
