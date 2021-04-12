@@ -1,4 +1,4 @@
-FROM jenkins:2.46.2
+FROM jenkins:lts
 MAINTAINER rajendarreddy jagapathi "rajendarreddyj@gmail.com"
 
 # Create Jenkins Log Folder
