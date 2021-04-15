@@ -45,7 +45,7 @@ RUN mv adoptopenjdk-${JAVA_VERSION} ${JAVA_HOME}
 # Add Java binary to path
 ENV PATH ${PATH}:${JAVA_HOME}/bin
 
-# Cleanup Maven residue
+# Cleanup Jdk residue
 RUN rm adoptopenjdk-${JAVA_VERSION}-bin.tar.gz
 RUN unset JAVA_VERSION
 RUN unset JAVA_SHA256
