@@ -1,4 +1,4 @@
-FROM tomcat:8.5.65-jdk8-openjdk-buster
+FROM tomcat:8.5.66-jdk8-openjdk-buster
 
 # Update repos and install required dependencies for build
 RUN apt-get update \
