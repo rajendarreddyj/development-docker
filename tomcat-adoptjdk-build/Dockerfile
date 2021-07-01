@@ -1,4 +1,4 @@
-FROM tomcat:8.5.66-jdk8-adoptopenjdk-hotspot
+FROM tomcat:8.5-jdk8-adoptopenjdk-hotspot
 
 # Update repos and install required dependencies for build
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \ 
