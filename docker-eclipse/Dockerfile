@@ -1,4 +1,4 @@
-FROM ubuntu:rolling
+FROM ubuntu:21.04
 MAINTAINER rajendarreddy jagapathi "rajendarreddyj@gmail.com"
 
 RUN sed 's/main$/main universe/' -i /etc/apt/sources.list && \
