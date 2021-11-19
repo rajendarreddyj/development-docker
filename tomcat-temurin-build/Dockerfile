@@ -1,4 +1,4 @@
-FROM tomcat:8.5.70-jdk8-temurin-focal
+FROM tomcat:8.5.72-jdk8-temurin-focal
 
 # Update repos and install required dependencies for build
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \ 
