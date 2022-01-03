@@ -1,4 +1,4 @@
-From eclipse-temurin:8u302-b08-jdk
+From eclipse-temurin:8u312-b07-jdk
 
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
