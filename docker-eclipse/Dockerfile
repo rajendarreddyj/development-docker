@@ -1,21 +1,6 @@
-FROM ubuntu:rolling
-MAINTAINER rajendarreddy jagapathi "rajendarreddyj@gmail.com"
+From eclipse-temurin:8u312-b07-jdk
 
-RUN sed 's/main$/main universe/' -i /etc/apt/sources.list && \
-    apt-get update && apt-get install -y software-properties-common && \
-    add-apt-repository ppa:webupd8team/java -y && \
-    apt-get update && \
-    echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \
-    apt-get install -y oracle-java8-installer libxext-dev libxrender-dev libxtst-dev && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* && \
-    rm -rf /tmp/*
-
-# Install libgtk as a separate step so that we can share the layer above with
-# the netbeans image
-RUN apt-get update && apt-get install -y libgtk2.0-0 libcanberra-gtk-module
-
-RUN wget http://mirror.cc.columbia.edu/pub/software/eclipse/technology/epp/downloads/release/neon/3/eclipse-jee-neon-3-linux-gtk-x86_64.tar.gz -O /tmp/eclipse.tar.gz -q && \
+RUN wget https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2021-12/R/eclipse-jee-2021-12-R-linux-gtk-x86_64.tar.gz&mirror_id=272 -O /tmp/eclipse.tar.gz -q && \
     echo 'Installing eclipse' && \
     tar -xf /tmp/eclipse.tar.gz -C /opt && \
     rm /tmp/eclipse.tar.gz
@@ -23,7 +8,7 @@ RUN wget http://mirror.cc.columbia.edu/pub/software/eclipse/technology/epp/downl
 # Install sudo
 RUN apt-get install -y sudo
 
-RUN chmod +x //opt/eclipse/eclipse && \
+RUN chmod +x /opt/eclipse/eclipse && \
     mkdir -p /home/developer && \
     echo "developer:x:1000:1000:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
     echo "developer:x:1000:" >> /etc/group && \
