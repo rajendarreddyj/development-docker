@@ -20,7 +20,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-FROM tomcat:8.5.70-jdk8-temurin-focal
+FROM tomcat:8.5.73-jdk8-temurin-focal
 LABEL maintainer="rajendarreddy jagapathi rajendarreddyj@gmail.com"
 
 # added noninteractive DEBIAN_FRONTEND. please refer https://stackoverflow.com/a/56569081/2162534
