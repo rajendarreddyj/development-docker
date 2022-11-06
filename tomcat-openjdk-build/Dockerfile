@@ -1,4 +1,4 @@
-FROM tomcat:8.5-jdk8-openjdk-buster
+FROM tomcat:10.0-jdk8-temurin-jammy
 
 # Update repos and install required dependencies for build
 RUN apt-get update \
