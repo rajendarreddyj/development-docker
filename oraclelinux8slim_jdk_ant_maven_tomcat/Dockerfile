@@ -1,4 +1,4 @@
-FROM oraclelinux:8-slim
+FROM oraclelinux:9-slim
 
 LABEL maintainer="rajendarreddyj@gmail.com"
 
